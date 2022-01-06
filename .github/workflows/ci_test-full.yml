@@ -20,19 +20,11 @@ jobs:
         python-version: [3.6, 3.8, 3.9]
         requires: ['oldest', 'latest']
         exclude:
-<<<<<<< HEAD
-          - python-version: 3.6
-            requires: 'latest'
-          - python-version: 3.9
-            requires: 'oldest'
-    env:
-=======
           - {python-version: 3.6, requires: 'latest'}
           - {python-version: 3.9, requires: 'oldest'}
     env:
       PYTEST_ARTEFACT: test-results-${{ matrix.os }}-py${{ matrix.python-version }}-${{ matrix.requires }}.xml
       PYTORCH_URL: https://download.pytorch.org/whl/cpu/torch_stable.html
->>>>>>> upstream/master
       TRANSFORMERS_CACHE: .cache/huggingface/
 
     # Timeout: https://stackoverflow.com/a/59076067/4521646
