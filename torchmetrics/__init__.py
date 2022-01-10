@@ -13,7 +13,17 @@ _PROJECT_ROOT = os.path.dirname(_PACKAGE_ROOT)
 
 from torchmetrics import functional  # noqa: E402
 from torchmetrics.aggregation import CatMetric, MaxMetric, MeanMetric, MinMetric, SumMetric  # noqa: E402
-from torchmetrics.audio import PIT, SDR, SI_SDR, SI_SNR, SNR  # noqa: E402
+from torchmetrics.audio import (  # noqa: E402
+    PIT,
+    SDR,
+    SI_SDR,
+    SI_SNR,
+    SNR,
+    ScaleInvariantSignalDistortionRatio,
+    ScaleInvariantSignalNoiseRatio,
+    SignalDistortionRatio,
+    SignalNoiseRatio,
+)
 from torchmetrics.classification import (  # noqa: E402, F401
     AUC,
     AUROC,
@@ -27,6 +37,7 @@ from torchmetrics.classification import (  # noqa: E402, F401
     CalibrationError,
     CohenKappa,
     ConfusionMatrix,
+    F1Score,
     FBeta,
     HammingDistance,
     Hinge,
@@ -104,6 +115,7 @@ __all__ = [
     "TweedieDevianceScore",
     "ExplainedVariance",
     "F1",
+    "F1Score",
     "FBeta",
     "HammingDistance",
     "Hinge",
@@ -142,8 +154,12 @@ __all__ = [
     "ROC",
     "SacreBLEUScore",
     "SDR",
+    "SignalDistortionRatio",
+    "ScaleInvariantSignalDistortionRatio",
     "SI_SDR",
     "SI_SNR",
+    "ScaleInvariantSignalNoiseRatio",
+    "SignalNoiseRatio",
     "SNR",
     "SpearmanCorrcoef",
     "SpearmanCorrCoef",

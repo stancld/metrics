@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 from torchmetrics.functional.audio.pit import pit, pit_permutate
-from torchmetrics.functional.audio.sdr import sdr
+from torchmetrics.functional.audio.sdr import scale_invariant_signal_distortion_ratio, sdr, signal_distortion_ratio
 from torchmetrics.functional.audio.si_sdr import si_sdr
 from torchmetrics.functional.audio.si_snr import si_snr
-from torchmetrics.functional.audio.snr import snr
+from torchmetrics.functional.audio.snr import scale_invariant_signal_noise_ratio, signal_noise_ratio, snr
 from torchmetrics.functional.classification.accuracy import accuracy
 from torchmetrics.functional.classification.auc import auc
 from torchmetrics.functional.classification.auroc import auroc
@@ -24,7 +24,7 @@ from torchmetrics.functional.classification.calibration_error import calibration
 from torchmetrics.functional.classification.cohen_kappa import cohen_kappa
 from torchmetrics.functional.classification.confusion_matrix import confusion_matrix
 from torchmetrics.functional.classification.dice import dice_score
-from torchmetrics.functional.classification.f_beta import f1, fbeta
+from torchmetrics.functional.classification.f_beta import f1, f1_score, fbeta
 from torchmetrics.functional.classification.hamming_distance import hamming_distance
 from torchmetrics.functional.classification.hinge import hinge
 from torchmetrics.functional.classification.iou import iou  # noqa: F401
@@ -93,6 +93,7 @@ __all__ = [
     "dice_score",
     "explained_variance",
     "f1",
+    "f1_score",
     "fbeta",
     "hamming_distance",
     "hinge",
@@ -129,9 +130,13 @@ __all__ = [
     "rouge_score",
     "sacre_bleu_score",
     "sdr",
+    "signal_distortion_ratio",
     "si_sdr",
+    "scale_invariant_signal_distortion_ratio",
     "si_snr",
+    "scale_invariant_signal_noise_ratio",
     "snr",
+    "signal_noise_ratio",
     "spearman_corrcoef",
     "specificity",
     "squad",
